@@ -15,6 +15,10 @@ class CreateTableSectorsPhotos extends Migration
     {
         Schema::create('sectors_photos', function (Blueprint $table) {
             $table->bigIncrements('id');
+
+            $table->string('photo');
+            $table->boolean('is_thumb');
+
             $table->timestamps();
         });
     }

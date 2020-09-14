@@ -15,6 +15,11 @@ class CreateTableSectors extends Migration
     {
         Schema::create('sectors', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name');
+            $table->text('description');
+            $table->boolean('condition');
+            $table->integer('position');
+            $table->string('slug');
             $table->timestamps();
         });
     }
